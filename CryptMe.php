@@ -1,11 +1,11 @@
 <?php
 class CryptMe{
-	private $api = "https://api.ineo-team.ir/CryptMe.php";
-	public function encode($input){
+    private $api = "https://api.ineo-team.ir/CryptMe.php";
+	public function encode($input, $password = null){
 		$cURL = curl_init($this->api);
 		curl_setopt_array($cURL, [
 			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_POSTFIELDS => ['action' => "encode", 'input' => $input],
+			CURLOPT_POSTFIELDS => ['action' => "encode", 'input' => $input, 'password' => $password],
 			CURLOPT_CUSTOMREQUEST => 'POST',
 		]);
 		$output = json_decode(curl_exec($cURL),true);
@@ -13,11 +13,11 @@ class CryptMe{
 		if($R == ""){ $R = "fail"; }
 		return $R;
 	}
-	public function decode($input){
+	public function decode($input, $password = null){
 		$cURL = curl_init($this->api);
 		curl_setopt_array($cURL, [
 			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_POSTFIELDS => ['action' => "decode", 'input' => $input],
+			CURLOPT_POSTFIELDS => ['action' => "decode", 'input' => $input, 'password' => $password],
 			CURLOPT_CUSTOMREQUEST => 'POST',
 		]);
 		$output = json_decode(curl_exec($cURL),true);
