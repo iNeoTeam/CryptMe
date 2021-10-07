@@ -1,14 +1,17 @@
 # CryptMe Project
 
-A Mini Class for EnCode and DeCode (Exclusive Algorithm) :
+A Mini Class for EnCode and DeCode (Exclusive Algorithm) with Password:
 
 
 ## Usage
 
-### PHP Code Example:
+### Sample PHP Code Example:
 ```php
 <?php
 	error_reporting(0);
+	if(!file_exists("CryptMe.php")){
+		copy("https://raw.githubusercontent.com/iNeoTeam/CryptMe/main/CryptMe.php", "CryptMe.php");
+	}
 	include 'CryptMe.php';
 	$crypt = new CryptMe();
 	
