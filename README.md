@@ -17,7 +17,7 @@ A Mini Class for EnCode and DeCode (Exclusive Algorithm) with Password:
 	
 	// EnCode:
 	echo $crypt->encode("iNeoTeam");
-	
+	echo "<br><br>";
 	// DeCode:
 	echo $crypt->decode("UUl5K0h3aFBWM1Z4ZzRhVk0xeFJXUT09");
 ?>
