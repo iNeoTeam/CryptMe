@@ -9,9 +9,8 @@ class CryptMe{
 			CURLOPT_CUSTOMREQUEST => 'POST',
 		]);
 		$output = json_decode(curl_exec($cURL),true);
-		$R = $output['result']['output'];
-		if($R == ""){ $R = "fail"; }
-		return $R;
+		curl_close($cURL);
+		return $output['result']['output'];
 	}
 	public function decode($input, $password = null){
 		$cURL = curl_init($this->api);
@@ -21,8 +20,7 @@ class CryptMe{
 			CURLOPT_CUSTOMREQUEST => 'POST',
 		]);
 		$output = json_decode(curl_exec($cURL),true);
-		$R = $output['result']['output'];
-		if($R == ""){ $R = "fail"; }
-		return $R;
+		curl_close($cURL);
+		return $output['result']['output'];
 	}
 }
