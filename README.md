@@ -24,7 +24,7 @@ A Mini Class for EnCode and DeCode (Exclusive Algorithm) with Password:
 ```
 
 ## Contact us: 
-	• EnCode & DeCode By: @CrossXss
+	• EnCode & DeCode By: @Sir4m1R
 	• Telegram: T.me/iNeoTeam
 	• WebSite: https://iNeo-Team.ir
 
